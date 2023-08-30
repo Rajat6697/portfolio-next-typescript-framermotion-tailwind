@@ -4,7 +4,11 @@ type Props = {}
 
 const Header = (props: Props) => {
   return (
-    <div>Header</div>
+    <header className='z-[999] relative'>
+        <div className='fixed top-0 left-1/2 h-[4.5rem] w-full rounded-none border border-white '>
+
+        </div>
+    </header>
   )
 }
 
