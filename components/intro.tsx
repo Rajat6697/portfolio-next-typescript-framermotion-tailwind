@@ -4,7 +4,12 @@ type Props = {}
 
 const Intro = (props: Props) => {
   return (
-    <div>Intro</div>
+    <section>
+      <div className="flex items-center justify-center">
+
+      </div>
+
+    </section>
   )
 }
 
