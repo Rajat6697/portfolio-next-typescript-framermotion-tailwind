@@ -39,7 +39,7 @@ const Intro = (props: Props) => {
           >👋</motion.span>
         </div>
       </div>
-      <motion.p className='mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl'
+      <motion.h1 className='mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl'
       initial={{opacity : 0, y : 100}}
       animate={{opacity : 1, y : 0}}
       transition={{type: "tween" , duration : .3}}
@@ -48,7 +48,7 @@ const Intro = (props: Props) => {
           Rajat Verma.
             </span> I am a  <span className='font-bold'> front-end developer </span>with <span className='font-bold'> 3 years</span> of experience. I enjoy <span className='italic underline'>
               building websites and apps.  </span> My focus is  <span className='font-bold underline'> React, Next.js and Web3.</span></span>
-        </motion.p>
+        </motion.h1>
 
         <motion.div className='flex flex-col sm:flex-row items-center justify-center px-4 text-lg font-medium gap-4'
         initial={{opacity : 0,  y: 100}}
@@ -58,13 +58,13 @@ const Intro = (props: Props) => {
           <Link href="#contact" className='group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover-bg-gray-950 active:scale-105 transition' >Contact me here<BsArrowRight
           className='opacity-70 group-hover:translate-x-1 transition'
           /></Link>
-          <a className='group bg-white text-gray-700 px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover-bg-white-950 active:scale-105 transition'>Download CV <HiDownload
+          <a className='group bg-white text-gray-700 px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110  hover:scale-110 hover-bg-white-950 active:scale-105 transition border border-black/10' href="/CV.pdf" download>Download CV <HiDownload
             className='opacity-70 group-hover:translate-x-1 transition'
           /></a>
-          <a className='bg-white text-gray-700 p-4 flex items-center gap-2 rounded-full'>
+          <a className='bg-white text-gray-700 p-4 flex items-center gap-2 rounded-full hover:scale-110' href="https://www.linkedin.com/in/rajat-verma-1289031b6/" target="_blank">
             <BsLinkedin/>
           </a>
-          <a className='bg-white text-gray-700 p-4 flex items-center gap-2 rounded-full'>
+          <a className='bg-white text-gray-700 p-4 flex items-center gap-2 rounded-full hover:scale-110' href="https://github.com/Rajat6697" target="_blank">
             <BsGithub/>
           </a>
         </motion.div>
