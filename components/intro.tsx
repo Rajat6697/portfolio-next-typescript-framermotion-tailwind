@@ -2,12 +2,15 @@
 import Image from 'next/image'
 import React from 'react'
 import { motion } from 'framer-motion'
+import Link from 'next/link'
+import {BsArrowRight, BsGithub, BsLinkedin} from 'react-icons/bs'
+import {HiDownload} from 'react-icons/hi'
 
 type Props = {}
 
 const Intro = (props: Props) => {
   return (
-    <section>
+    <section className='mb-28 max-w-[50rem] text-center sm:mb-0'>
       <div className="flex items-center justify-center">
         <div className='relative'>
           <motion.div
@@ -35,9 +38,37 @@ const Intro = (props: Props) => {
 
           >👋</motion.span>
         </div>
-          
       </div>
+      <motion.p className='mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl'
+      initial={{opacity : 0, y : 100}}
+      animate={{opacity : 1, y : 0}}
+      transition={{type: "tween" , duration : .3}}
+      >
+          <span>Hello, I am <span className='font-bold'>
+          Rajat Verma.
+            </span> I am a  <span className='font-bold'> front-end developer </span>with <span className='font-bold'> 3 years</span> of experience. I enjoy <span className='italic underline'>
+              building websites and apps.  </span> My focus is  <span className='font-bold underline'> React, Next.js and Web3.</span></span>
+        </motion.p>
 
+        <motion.div className='flex flex-col sm:flex-row items-center justify-center px-4 text-lg font-medium gap-4'
+        initial={{opacity : 0,  y: 100}}
+        animate={{opacity : 1,  y: 0}}
+        transition={{delay: .3}}
+        >
+          <Link href="#contact" className='group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover-bg-gray-950 active:scale-105 transition' >Contact me here<BsArrowRight
+          className='opacity-70 group-hover:translate-x-1 transition'
+          /></Link>
+          <a className='group bg-white text-gray-700 px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover-bg-white-950 active:scale-105 transition'>Download CV <HiDownload
+            className='opacity-70 group-hover:translate-x-1 transition'
+          /></a>
+          <a className='bg-white text-gray-700 p-4 flex items-center gap-2 rounded-full'>
+            <BsLinkedin/>
+          </a>
+          <a className='bg-white text-gray-700 p-4 flex items-center gap-2 rounded-full'>
+            <BsGithub/>
+          </a>
+        </motion.div>
+          
     </section>
   )
 }
