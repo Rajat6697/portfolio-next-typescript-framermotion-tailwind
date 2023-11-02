@@ -16,7 +16,7 @@ const Intro = (props: Props) => {
           <motion.div
           initial={{opacity : 0, scale: 0}}
           animate={{opacity : 1, scale : 1}}
-          transition={{type: "tween", duration: .25}}
+          transition={{type: "tween", duration: .13}}
           >
 
           <Image src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?auto=format&fit=crop&q=80&w=870&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="person image"
@@ -34,7 +34,7 @@ const Intro = (props: Props) => {
            transition={{type: "spring", 
            stiffness : 125,
            delay : .1,
-           duration: .8}}
+           duration: .275}}
 
           >👋</motion.span>
         </div>
@@ -42,7 +42,7 @@ const Intro = (props: Props) => {
       <motion.h1 className='mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl'
       initial={{opacity : 0, y : 100}}
       animate={{opacity : 1, y : 0}}
-      transition={{type: "tween" , duration : .3}}
+      transition={{type: "tween" , duration : .1}}
       >
           <span>Hello, I am <span className='font-bold'>
           Rajat Verma.
