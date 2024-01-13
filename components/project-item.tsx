@@ -7,7 +7,7 @@ import { projectsData } from "@/lib/data";
 
 type ProjectProps = (typeof projectsData)[number];
 
-function ProjectItem({ title, description, imageUrl, tags }: ProjectProps) {
+function ProjectItem({ title, description, tags, imageUrl,  }: ProjectProps) {
 
     const elRef = useRef(null);
 
