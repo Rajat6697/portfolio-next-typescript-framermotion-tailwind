@@ -7,7 +7,7 @@ type Props = {};
 
 const Projects = (props: Props) => {
   return (
-    <section className="flex flex-col items-center">
+    <section className="flex flex-col items-center scroll-mt-28" id="projects">
       <SectionHeading> My Projects</SectionHeading>
       <div >
         {projectsData.map((project, indexOfProject) => (
