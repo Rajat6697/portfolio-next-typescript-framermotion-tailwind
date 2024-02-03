@@ -9,6 +9,15 @@ import corpcommentImg from "@/public/corpcomment.png";
 import rmtdevImg from "@/public/rmtdev.png";
 import wordanalyticsImg from "@/public/wordanalytics.png";
 
+export const HEADER_SECTIONS ={
+  HOME : "Home",
+  ABOUT : "About",
+  PROJECTS : "Projects",
+  SKILLS : "Skills",
+  EXPERIENCE : "Experience",
+  CONTACT : "Contact",
+} as const;
+
 // Define an array of navigation links for the website
 export const links = [
   {
