@@ -9,7 +9,6 @@ type Props = {};
 
 const Header = (props: Props) => {
 
-  const [activeSection, setActiveSection] = useState(HEADER_SECTIONS.HOME)
   
   return (
     <header className="z-[999] relative">
