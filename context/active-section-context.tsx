@@ -1,8 +1,9 @@
 "use client"
 import React, { createContext, useContext, useState } from 'react';
-import { HEADER_SECTIONS, links } from '@/lib/data';
+import { HEADER_SECTIONS } from '@/lib/data';
+import type { SectionName } from '@/lib/types';
 
-type SectionName = (typeof links)[number]["name"];
+
 
 type ActiveSectionContextProviderProps = {
     children : React.ReactNode;

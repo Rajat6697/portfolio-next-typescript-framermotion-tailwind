@@ -8,22 +8,16 @@ import {HiDownload} from 'react-icons/hi'
 import { useActiveSectionContext } from '@/context/active-section-context'
 import { useInView } from 'react-intersection-observer'
 import { HEADER_SECTIONS } from '@/lib/data'
+import UseSectionInView from '@/lib/hooks/UseSectionInView'
 
 type Props = {}
 
 const Intro = (props: Props) => {
 
-  const { ref, inView } = useInView({
-    threshold : .4
-  });
-  const {setActiveSection} = useActiveSectionContext()
-  
-  useEffect(()=> {
-    console.log("inview HOME", inView)
-    if(inView){
-      setActiveSection(HEADER_SECTIONS.HOME);
-    }
-  }, [inView, setActiveSection])
+  const {ref} = UseSectionInView(
+    HEADER_SECTIONS.HOME,
+      0.5
+    )
   
   return (
     <section ref={ref} id="home" className='mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-28'>

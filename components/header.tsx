@@ -5,13 +5,20 @@ import { HEADER_SECTIONS, links } from "@/lib/data";
 import Link from "next/link";
 import clsx from "clsx";
 import { useActiveSectionContext } from "@/context/active-section-context";
+import type { SectionName } from "@/lib/types";
 
 type Props = {};
 
 const Header = (props: Props) => {
 
-  const  {activeSection, setActiveSection} = useActiveSectionContext()
-  
+  const  {activeSection, setActiveSection, setTimeOfLastClick} = useActiveSectionContext()
+
+  const linkClickHandler =(section : SectionName)=> {
+    console.log("linkClickHandler", section)
+      setActiveSection(section)
+      setTimeOfLastClick(Date.now())
+  }
+
   return (
     <header className="z-[999] relative">
       <motion.div
@@ -34,7 +41,7 @@ const Header = (props: Props) => {
                   "text-gray-950" : activeSection === link.name
                 })}
                 href={link.hash}
-                onClick={()=> setActiveSection(link.name)}
+                onClick={()=>linkClickHandler(link.name)}
               >
                 {link.name}
                 {
