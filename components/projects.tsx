@@ -15,7 +15,7 @@ const Projects = (props: Props) => {
   )
 
   return (
-    <section ref={ref} className="flex flex-col items-center scroll-mt-28" id="projects">
+    <section ref={ref} className="flex flex-col items-center mb-28 scroll-mt-28" id="projects">
       <SectionHeading> My Projects</SectionHeading>
       <div >
         {projectsData.map((project, indexOfProject) => (
