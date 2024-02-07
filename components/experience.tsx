@@ -5,13 +5,21 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import { experiencesData } from "@/lib/data";
+import { HEADER_SECTIONS, experiencesData } from "@/lib/data";
+import UseSectionInView from "@/lib/hooks/UseSectionInView";
 
 type Props = {};
 
 const Experience = (props: Props) => {
+
+  const {ref} = UseSectionInView(
+    HEADER_SECTIONS.EXPERIENCE,
+      0.7
+    )
+  
   return (
     <section 
+    ref={ref}
     className="mb-28 max-w-[45rem] text-center leading-8 sm:mb-40 scroll-mt-28"
    
     id="experience">
