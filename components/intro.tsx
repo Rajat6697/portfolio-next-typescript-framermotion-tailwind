@@ -68,7 +68,7 @@ const Intro = (props: Props) => {
           <Link href="#contact" className='group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover-bg-gray-950 active:scale-105 transition' >Contact me here<BsArrowRight
           className='opacity-70 group-hover:translate-x-1 transition'
           /></Link>
-          <a className='group bg-white text-gray-700 px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110  hover:scale-110 hover-bg-white-950 active:scale-105 transition border border-black/10' href="/CV.pdf" download>Download CV <HiDownload
+          <a className='group bg-white text-gray-700 px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110  hover:scale-110 hover-bg-white-950 active:scale-105 transition borderBlack' href="/CV.pdf" download>Download CV <HiDownload
             className='opacity-70 group-hover:translate-x-1 transition'
           /></a>
           <a className='bg-white text-gray-700 p-4 flex items-center gap-2 rounded-full hover:scale-110' href="https://www.linkedin.com/in/rajat-verma-1289031b6/" target="_blank">
