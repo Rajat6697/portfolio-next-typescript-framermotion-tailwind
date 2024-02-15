@@ -121,3 +121,6 @@ export const skillsData = [
   "Django",
   "Framer Motion",
 ] as const;
+
+
+export const EmailMessagePreviewText = "This is a message from Rajat's Portfolio" as const
